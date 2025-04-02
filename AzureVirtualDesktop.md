@@ -1,29 +1,25 @@
+## The following use case necessitates the development of a solution utilizing appropriate Azure services.
 
 # Use Case 1: Remote Work Solution
 ## Background:
 Contoso has 50 employees working remotely. They need a way to provide secure access to corporate applications without requiring employees to have high-end hardware.
 ## Use Case Objective:
 Design and implement a solution that provides secure and cost-effective access to virtual desktops for employees working from different locations. The solution must be scalable.
-## Design and Architecture:
-- Virtual Desktop Environment: Set up an environment where employees can access their applications securely from any device. Ensure that the virtual desktop is scalable based on user demand.
-- Cost Control: Use virtual desktop configurations that maximize resource efficiency without compromising performance.
-- Security: Implement identity management to ensure that only authorized employees can access the environment. Ensure that data in the virtual desktops is protected.
-- Scalability: Ensure that the solution can scale up or down based on usage.
 
-# Deploying an Azure Virtual Desktop environment to address the aforementioned use case.
+# How I Deployed an Azure Virtual Desktop environment to address the aforementioned use case.
 
 ## Prerequisites
 
 - An active Azure subscription
-- Azure Active Directory (AAD) configured
 - Administrator permissions
-## Create resource Group
+- 
+## I Created resource Group
 - Select my subscription
 - Name my resources group 'Lorchez_resource'
 - Selected a region where i want to host my virtual machine
 - ![Resource_group](https://github.com/user-attachments/assets/d6643fac-3cbe-4d30-b141-777077506727)
 
-## Create a Virtual network
+## I Created a Virtual network
 - Select my subscription
 - Select my resource group
 - Name the vnet
@@ -33,7 +29,7 @@ Design and implement a solution that provides secure and cost-effective access t
   ![Create vnet](https://github.com/user-attachments/assets/2575316c-3e8a-4801-baec-35db41205c37)
 ![Vnet](https://github.com/user-attachments/assets/8024f77e-f2a9-4318-99b6-eb02642ec780)
 
-## Create a Host Pool
+## I Created a Host Pool
 - Navigate to the Azure portal.
 - Search for 'Azure Virtual Desktop' and select 'Host pools'.
 - Click on 'Create' and provide details: 
@@ -44,24 +40,24 @@ Design and implement a solution that provides secure and cost-effective access t
 
 - Click 'Review + Create' to finalize. 
 ![Host pool](https://github.com/user-attachments/assets/6929733f-3d11-45f0-b76b-8f72dc2e7e18)
-## Create Session Hosts
+## I Created Session Hosts
 Session hosts are virtual machines that users connect to. 
 ![session 1](https://github.com/user-attachments/assets/bff67c06-e557-4e3e-9e0f-3fa705c80c4e)
 ![Session 2](https://github.com/user-attachments/assets/4ba09874-47a2-4ae7-9fda-c8a6d24b5b7c)
 ![Session 3](https://github.com/user-attachments/assets/4256df99-a297-4cb9-891b-9f4d3932f4e0)
 ![Session host](https://github.com/user-attachments/assets/51e808c3-04ae-4662-b417-797db1bc1f16)
 
-## Create an Application Group
+## I Created an Application Group
 An application group contains applications that users can access.
 ![AVDSession 1](https://github.com/user-attachments/assets/ce62ddc0-bc41-4639-843a-60b2a0659bab)
 
-## Create a Workspace
+## I Created a Workspace
 A workspace is a logical container for application groups. 
 
-## Assign Users to the Application Group
+## I Assigned Users to the Application Group
 ![Application group in workspace](https://github.com/user-attachments/assets/64960eb2-cc29-40ab-be0f-f3d4122f6deb)
 
-## Register the Application Group with the Workspace
+## I Registered the Application Group with the Workspace
 ![Application group in workspace](https://github.com/user-attachments/assets/bb8053a3-f184-4333-a5d0-1a6ab5905b47)
 
 ## Testing and Verification
